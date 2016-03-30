@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		1441D80EF427D4F2CE0FC2CEE0F88255 /* Pods-SatyaSecondLib_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F6E032624A62BF63E02B45E467B97F /* Pods-SatyaSecondLib_Tests-dummy.m */; };
 		252BE1AF8F1ACA4C5BCC793A35ED0754 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BF39C3E2577573F82613C7FDB20F02 /* Foundation.framework */; };
-		2FF0A3951CABA5FC009C386E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3941CABA5FC009C386E /* ReplaceMe.swift */; };
+		2FF0A3A11CABB096009C386E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 2FF0A39E1CABB096009C386E /* .gitkeep */; };
+		2FF0A3A21CABB096009C386E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A39F1CABB096009C386E /* ReplaceMe.swift */; };
 		3580247588FD181F0014F8A9A0A86794 /* Pods-SatyaSecondLib_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B916E591054FEC1C6E5A1DDF5F641361 /* Pods-SatyaSecondLib_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B961BE91049E40940F3C2867B452BC8 /* Pods-SatyaSecondLib_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 766848893D59CCAA9828A190E3DA1AF1 /* Pods-SatyaSecondLib_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B02AC1D81F284B7D9E0C83C818662E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BF39C3E2577573F82613C7FDB20F02 /* Foundation.framework */; };
@@ -39,7 +40,8 @@
 		251E8B907491C7C91A3378BB75A3700A /* Pods-SatyaSecondLib_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SatyaSecondLib_Example.modulemap"; sourceTree = "<group>"; };
 		2A0ADC88DD7DC576A2214F6A42E83858 /* Pods-SatyaSecondLib_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SatyaSecondLib_Example-dummy.m"; sourceTree = "<group>"; };
 		2EEEC2B6AE623607ED8A476187BDF212 /* Pods-SatyaSecondLib_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SatyaSecondLib_Example-frameworks.sh"; sourceTree = "<group>"; };
-		2FF0A3941CABA5FC009C386E /* ReplaceMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		2FF0A39E1CABB096009C386E /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		2FF0A39F1CABB096009C386E /* ReplaceMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		423E1975FE88B930AED433C09971D4FE /* Pods_SatyaSecondLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SatyaSecondLib_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		474E8E35923E2AA3FC7911B32146A6E0 /* Pods-SatyaSecondLib_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SatyaSecondLib_Tests.modulemap"; sourceTree = "<group>"; };
 		57BA4ED65CA40B442127358DE23F11BE /* Pods-SatyaSecondLib_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SatyaSecondLib_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2FF0A39A1CABB096009C386E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				2FF0A39D1CABB096009C386E /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		2FF0A39D1CABB096009C386E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2FF0A39E1CABB096009C386E /* .gitkeep */,
+				2FF0A39F1CABB096009C386E /* ReplaceMe.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		3C92C94456CC59C83AE1CDD51F467063 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +214,7 @@
 		E3B43F227527449B7065174852CDFA68 /* SatyaSecondLib */ = {
 			isa = PBXGroup;
 			children = (
-				2FF0A3941CABA5FC009C386E /* ReplaceMe.swift */,
+				2FF0A39A1CABB096009C386E /* Pod */,
 				1AA368E6FB2CC9BD244D7B0348B360B3 /* Frameworks */,
 			);
 			name = SatyaSecondLib;
@@ -310,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF0A3A11CABB096009C386E /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF0A3A21CABB096009C386E /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FF0A3951CABA5FC009C386E /* ReplaceMe.swift in Sources */,
 				C229156EE04A0DF172B58E36E4793345 /* Pods-SatyaSecondLib_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
