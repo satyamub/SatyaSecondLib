@@ -20,6 +20,15 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("User Logged Out")
+        // var loginM:FBSDKLoginManager = FBSDKLoginManager()
+        //  loginM.logOut()
+        //FBSDKLoginManager().logOut()
+        
+        //        FBSDKAccessToken.setCurrentAccessToken(nil)
+        
+    }
     @IBAction  func loginFb(sender:AnyObject)
     {
         
@@ -55,18 +64,18 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
                         }
                         if(fbloginresult.isCancelled)
                         {
-                            JLToast.makeText("You have cancelled the login.").show()
+                            //JLToast.makeText("You have cancelled the login.").show()
                         }
                         
                     }
                     else
                     {
-                        JLToast.makeText("You have cancelled the login.").show()
+                       // JLToast.makeText("You have cancelled the login.").show()
                     }
                 }
                 else
                 {
-                    JLToast.makeText("Facebook error happened. Please try again later.").show()
+                   // JLToast.makeText("Facebook error happened. Please try again later.").show()
                     
                 }
                 
@@ -79,8 +88,8 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
-                    self.dict = result as! NSDictionary
-                    print(self.dict, terminator: "")
+                   // self.dict = result as! NSDictionary
+                    //print(self.dict, terminator: "")
                     
                     print(FBSDKAccessToken.currentAccessToken().tokenString)
                     //NSLog(self.dict.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String)
@@ -89,8 +98,63 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         }
         else
         {
-            JLToast.makeText("Current Access Token is Nil").show()
+            //JLToast.makeText("Current Access Token is Nil").show()
         }
+    }
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        NSLog("didCompleteWithResult")
+        if error != nil
+        {
+            //JLToast.makeText("Error").show()
+            
+        }
+        if let b = result
+        {
+            if ((error) != nil)
+            {
+                FBSDKLoginManager().logOut()
+                //JLToast.makeText("Facebook login error").show()
+            }
+            else if result.isCancelled {
+                
+               // self.fbloginButton.enabled = false
+                FBSDKLoginManager().logOut()
+                FBSDKAccessToken.setCurrentAccessToken(nil)
+               /// JLToast.makeText("You have cancelled facebook login").show()
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            else {
+                // If you ask for multiple permissions at once, you
+                // should check if specific permissions missing
+                if(result != nil)
+                {
+                    if result.grantedPermissions.contains("email")
+                    {
+                       // self.fbloginButton.enabled = false
+                        self.getFBUserData()
+                        //self.getFBUserDataWithoutEmail()
+                    }
+                    else
+                    {
+                        //self.fbloginButton.enabled = false
+                       // JLToast.makeText("Your email address has not been recovered from facebook account. Please provide it.")
+                        //self.getFBUserDataWithoutEmail()
+                    }
+                }
+                else
+                {
+                    //JLToast.makeText("No Data.")
+                }
+            }
+        }
+        else
+        {
+           // self.facebookFirstName = ""
+            //self.facebookUserid = ""
+           // self.facebookName = ""
+          
+        }
+        //JLToast.makeText("Returned.").show()
     }
 }
 

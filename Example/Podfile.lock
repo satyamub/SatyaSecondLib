@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SatyaSecondLib: d914e95aa9546b6f7cb0787d6082b11f60a13382
+  SatyaSecondLib: bfeba93cc028dc0c514c03b868adce7ab8fd8ac3
 
 COCOAPODS: 0.38.2

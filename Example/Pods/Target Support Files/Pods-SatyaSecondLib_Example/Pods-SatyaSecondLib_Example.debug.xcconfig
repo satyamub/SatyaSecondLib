@@ -1,7 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../.." "$(PODS_ROOT)/../.." "$(PODS_ROOT)/../.."
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SatyaSecondLib" "${PODS_ROOT}/Headers/Public/SatyaSecondLib/Bolts" "${PODS_ROOT}/Headers/Public/SatyaSecondLib/FBSDKCoreKit" "${PODS_ROOT}/Headers/Public/SatyaSecondLib/FBSDKLoginKit"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/SatyaSecondLib.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "SatyaSecondLib"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+OTHER_CFLAGS = $(inherited)  -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/SatyaSecondLib" -isystem "${PODS_ROOT}/Headers/Public/SatyaSecondLib/Bolts" -isystem "${PODS_ROOT}/Headers/Public/SatyaSecondLib/FBSDKCoreKit" -isystem "${PODS_ROOT}/Headers/Public/SatyaSecondLib/FBSDKLoginKit"
+OTHER_LDFLAGS = $(inherited) -framework "Bolts" -framework "FBSDKCoreKit" -framework "FBSDKLoginKit"
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-SatyaSecondLib_Example
 PODS_ROOT = ${SRCROOT}/Pods
