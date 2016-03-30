@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FF0A3751CABA08A009C386E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF0A3741CABA08A009C386E /* MBProgressHUD.m */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FF0A3721CABA089009C386E /* SatyaSecondLib_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SatyaSecondLib_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		2FF0A3731CABA08A009C386E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2FF0A3741CABA08A009C386E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		4B008FD0886EA4BD743F4836 /* Pods_SatyaSecondLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SatyaSecondLib_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA21CF041175A903A7C2ACA /* Pods-SatyaSecondLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SatyaSecondLib_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SatyaSecondLib_Tests/Pods-SatyaSecondLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SatyaSecondLib_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SatyaSecondLib_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,12 +97,15 @@
 		607FACD21AFB9204008FA782 /* Example for SatyaSecondLib */ = {
 			isa = PBXGroup;
 			children = (
+				2FF0A3731CABA08A009C386E /* MBProgressHUD.h */,
+				2FF0A3741CABA08A009C386E /* MBProgressHUD.m */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				2FF0A3721CABA089009C386E /* SatyaSecondLib_Example-Bridging-Header.h */,
 			);
 			name = "Example for SatyaSecondLib";
 			path = SatyaSecondLib;
@@ -360,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				2FF0A3751CABA08A009C386E /* MBProgressHUD.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,11 +497,14 @@
 			baseConfigurationReference = A22164ABC9D5033561636E9C /* Pods-SatyaSecondLib_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SatyaSecondLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SatyaSecondLib/SatyaSecondLib_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -502,11 +513,13 @@
 			baseConfigurationReference = 7A5B635BCF56E0E50ED4370C /* Pods-SatyaSecondLib_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SatyaSecondLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SatyaSecondLib/SatyaSecondLib_Example-Bridging-Header.h";
 			};
 			name = Release;
 		};

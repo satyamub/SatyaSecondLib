@@ -1,0 +1,14 @@
+PODS:
+  - SatyaSecondLib (0.1.0)
+
+DEPENDENCIES:
+  - SatyaSecondLib (from `../`)
+
+EXTERNAL SOURCES:
+  SatyaSecondLib:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SatyaSecondLib: d914e95aa9546b6f7cb0787d6082b11f60a13382
+
+COCOAPODS: 0.38.2

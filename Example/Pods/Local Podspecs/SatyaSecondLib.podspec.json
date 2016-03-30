@@ -1,0 +1,25 @@
+{
+  "name": "SatyaSecondLib",
+  "version": "0.1.0",
+  "summary": "A short description of SatyaSecondLib.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SatyaSecondLib",
+  "license": "MIT",
+  "authors": {
+    "Satya Prakash dash": "satya.saphire@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SatyaSecondLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "SatyaSecondLib": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
